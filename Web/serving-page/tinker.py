@@ -30,6 +30,3 @@ def login():
     print (resp.text)
     # ALLES!{ohh-b0y-java-y-u-do-th1s-t0-m3???!?}
 
-
-post_config()
-login()

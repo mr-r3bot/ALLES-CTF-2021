@@ -17,18 +17,6 @@ API endpoints
 /logout
 ```
 
-----------------------------------
-`/register`
-
-- Take `username` and `password` parameter
-- Get Servelet Context list of User (array)
-- Check if username has existed in Array, if yes => Username existed
-
-else:
-- Create new user and add to `users` Array
-- Store password in `md5` hash
-- Add attribute `config` to user's session
-- Redirect back to `home.jsp`
 
 --------------------------
 `/login`
@@ -43,66 +31,34 @@ else:
 
 Get the current **session** with the current `UserConfig` and then set to the current user logging in
 
-
-
-------------------------
-`/config`
-
-- Set user config
-
-Receive 3 params:
-
-```text
-debugMode
-language
-user
-```
-
-Back-end read JSON in and deserialize it
-
+Notice: 
 ```java
-ObjectMapper objectMapper = new ObjectMapper();
+if (userConfig.isDebugMode()) {
 
-UserConfig userConfig = objectMapper.readValue(jsonConfig, UserConfig.class);
+String pw1 = new String(Hex.encodeHex(digestStorage.digest()));
+
+String pw2 = password_md5_sha1;
+
+java.util.logging.Logger.getLogger("login")
+
+.info(String.format("Login tried with: %s == %s", pw1, pw2));
+
+}
+
+if (Arrays.equals(passwordBytes, digestStorage.digest())) {
+
+if (userConfig.isDebugMode())
+
+java.util.logging.Logger.getLogger("login").info("Passwords were equal");
+
+return u;
+
+}
 ```
 
-Perform conditional check before update user configuration:
-If field `user` is set, return error
+In **debugMode** , `digest()` got called twice
+- First call, digest will read all from the buffer that has been `.update()`
+- Second call, digest's buffer will be empty, so it will generate a `null-byte` hash
 
-```java
-  
 
-if (userConfig == null) {
-
-request.setAttribute("message", "Failed to parse user configuration");
-
-request.setAttribute("type", "danger");
-
-}
-
-else if (userConfig.getUser() != null) {
-
-request.setAttribute("type", "danger");
-
-request.setAttribute("message", "Hacking detected!");
-
-}
-
-else {
-
-request.setAttribute("type", "success");
-
-request.setAttribute("message", "User configuration updated");
-
-session.setAttribute("config", userConfig);
-
-}
-
-  
-
-dispatcher.forward(request, response);
-```
-
-Web app is using a persistent session and modify the session on the fly, **not change set the session again** 
-
-------------------------------------------
+-------------------------

@@ -1,0 +1,95 @@
+{
+  "main": {
+    "id": "b64c694342476168",
+    "type": "split",
+    "children": [
+      {
+        "id": "cb4d7b3e72ebe7b8",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "serve-page.md",
+            "mode": "preview"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8cc713abe95897e2",
+    "type": "split",
+    "children": [
+      {
+        "id": "601108f41bdfb8f1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3078ec20453c350f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "7ac45619348eb026",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "6d1f4d1197f3fb7f",
+    "type": "split",
+    "children": [
+      {
+        "id": "60ecafdffc057117",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "86047ee4a5e40b99",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "serve-page.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "cb4d7b3e72ebe7b8",
+  "lastOpenFiles": [
+    "serve-page.md",
+    "alles-chat.md",
+    "Untitled.md"
+  ]
+}

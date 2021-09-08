@@ -117,6 +117,7 @@ def proxy(path):
         waf_param(request.args)
         waf_param(request.form)
     except:
+        print ("blocked by waf")
         return 'error'
 
     # contact backend server
@@ -135,6 +136,7 @@ def proxy(path):
                             allow_redirects=False)
     
     if not proxy_request:
+        print ("Back-end not response")
         return 'error'
 
     

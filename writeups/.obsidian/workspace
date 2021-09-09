@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "serve-page.md",
-            "mode": "source"
+            "file": "amazing-crypto-waf.md",
+            "mode": "preview"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "serve-page.md",
+                "file": "amazing-crypto-waf.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,7 @@
   },
   "active": "cb4d7b3e72ebe7b8",
   "lastOpenFiles": [
+    "amazing-crypto-waf.md",
     "serve-page.md",
     "alles-chat.md",
     "Untitled.md"

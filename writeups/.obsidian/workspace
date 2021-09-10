@@ -4,14 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "cb4d7b3e72ebe7b8",
+        "id": "52c84b7ba763f047",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "amazing-crypto-waf.md",
-            "mode": "preview"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -68,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "amazing-crypto-waf.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,11 +82,11 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "cb4d7b3e72ebe7b8",
+  "active": "52c84b7ba763f047",
   "lastOpenFiles": [
+    "Untitled.md",
     "amazing-crypto-waf.md",
     "serve-page.md",
-    "alles-chat.md",
-    "Untitled.md"
+    "alles-chat.md"
   ]
 }
